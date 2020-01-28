@@ -1,0 +1,28 @@
+version: "3"
+
+networks:
+  web:
+    external: true
+
+services:
+  website:
+    # Replace with your container name
+    container_name: template-container
+
+    # Replace with your image
+    image: template/template-container:latest
+
+    restart: always
+
+    ports:
+      # Map Ports
+      - 3001:3001
+
+    labels:
+      # Replace with your domain host
+      - traefik.frontend.rule=Host:template-container.com
+      - traefik.docker.network=web
+      - traefik.port=3001
+
+    networks:
+      - web

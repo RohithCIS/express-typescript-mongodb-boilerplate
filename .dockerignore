@@ -1,0 +1,10 @@
+dockerbuild.sh
+deploy.sh
+docker-compose.yaml
+.git
+.gitignore
+node_modules
+app
+gulpfile.js
+tsconfig.json
+tslint.json
